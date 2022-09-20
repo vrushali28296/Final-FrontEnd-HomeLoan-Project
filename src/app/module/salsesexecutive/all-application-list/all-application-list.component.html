@@ -1,0 +1,36 @@
+<table class="table table-dark">
+    <thead>
+        
+        <th> Applicantid </th>
+        <th> Applicant name </th>
+        <th> Applicant occupation </th>
+        <th> Applicant pancard</th>
+        <th> Applicant emailID</th>
+        <!-- <th> cibil Score </th>
+        -->
+<!--        
+        <th>   Action </th>
+        <th>   Action </th> -->
+    </thead>
+
+    <tbody *ngIf=retriveApp>
+    <tr *ngFor="let a of retriveApp">
+       
+    <td>{{a.applicantid}}</td>
+    <td>{{a.applicantname}}</td>
+    <td>{{a.applicantoccupation}}</td>
+    <td>{{a.applicantpancard}}</td>
+    <td>{{a.applicantemail}}</td>
+    <!-- <td>{{a.cibil.cibilScore}}</td> -->
+    <!-- <td>{{a.cibil.CibilScore}}</td>
+   
+       
+        <td><button type="button" class="btn btn-success">Approved </button>
+        </td>
+        <td><button type="button" class="btn btn-danger">Rejected</button>
+        </td>
+    
+  </tr>
+<!-- </tbody> -->
+
+</table>

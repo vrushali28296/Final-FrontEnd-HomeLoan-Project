@@ -1,0 +1,41 @@
+
+<table class="table table-dark">
+  <thead>
+      
+      <th> applicantid </th>
+      <th> applicant_name </th>
+      <th> applicant_occupation </th>
+      <th> applicant_pancard</th>
+      <th> applicant_email</th>
+      <th> Generate-cibil </th>
+      <th>Cibil-Score</th>
+      <th>Cibil-Status</th>
+      <th>   Action </th>
+      <th>   Action </th>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let app of applicant">
+     
+  <td>{{app.applicantid}}</td>
+  <td>{{app.applicantname}}</td>
+  <td>{{app.applicantoccupation}}</td>
+  <td>{{app.applicantpancard}}</td>
+  <td>{{app.applicantemail}}</td>
+  <td>{{app.cibil.cibilScore}}</td>
+  <td>{{app.cibil.cibilStatus}}</td>
+   <!-- <td ><button type="button"  (click)="checkcibil(a.applicantid)">checkcibil</button></td> -->
+   <!-- <td *ngIf="app  !=null">{{fc}}</td> -->
+      <td><button type="button" class="btn btn-success" (click)="sendemail(app.applicantemail)">Send_Email </button>
+      </td>
+      <!-- <td><button type="button" class="btn btn-danger">Rejected</button></td> -->
+      <td><button type="button" class="btn btn-success" (click)="savecustomer(app.applicantid)">Add_Customer</button></td>
+       <!-- <td>{{}}</td>  -->
+
+ </tbody>
+
+</table>
+
+
+
+

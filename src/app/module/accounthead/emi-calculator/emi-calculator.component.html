@@ -1,0 +1,40 @@
+<p>emi-calculator works!</p>
+<!-- <table border="1"> -->
+<!-- <div id=outer>
+  <div class='ac b'>EMI Calculator</div>
+  <div class="form-group">
+  <div id=cover ><form><table class=main>
+    <col class=w50><col class=w50>
+    <tr><th>Customer ID<th>
+      <input type="text" [(ngModel)]="cs.c.customerid" name="customerid"></th>
+      
+    <tr><th>Loan Amount<th>
+      <input placeholder="Enter Loan Amount" [(ngModel)]="cs.loanDetails.loanPrincipalAmt" name="loanPrincipalAmt"></th>
+      <tr>
+      <th>Repayment in months<td><input placeholder="Enter Loan Tenure" [(ngModel)]="cs.loanDetails.loanTenure" name="loanTenure"></td>
+        <tr><th>Interest Rate<td><input placeholder="Enter Loan Interestrate " [(ngModel)]="cs.loanDetails.rateOfInterest" name="rateOfInterest"> </td>
+          <tr><td><button type=reset  >Reset</button></td>
+            <td><button type="button" (click)="calculation(cs.loanDetails)">Submit</button> </td>
+              <tr><th>EMI<td><input name="emiAmtMonnthly" [(ngModel)]="cs.loanDetails.emiDetails.emiAmtMonnthly"></td> -->
+                <!-- <tr><th>Interest payable<td> <input id=tintt1></td>
+                 <tr><th>Total payable<td><input id=gt1></td> -->
+                    <!-- </table>
+                  </form>
+                </div>
+              </div>
+            </div> -->
+<!-- </table> -->
+
+
+
+<div class="form-group">
+    <br>
+    <h1 style="color: crimson"><b>EMI Calculator</b></h1><br>
+    Customer Id :<br><input class="form-control" type="number" [(ngModel)]="id" placeholder="Cuctomer Id" /><br>
+  
+  Loan Amount in ₹:<br><input class="form-control" type="number" [(ngModel)]="loanAmount" placeholder="Loan Amount" /><br>
+  Tenure in Months:<br><input class="form-control" type="number" [(ngModel)]="tenure" placeholder="Tenure in Months" /><br>
+  Interest Rate %:<br><input class="form-control" type="number" [(ngModel)]="interest" placeholder="Interest in Months" /><br><br>
+  <button class="btn btn-danger" (click)="cal(id)">Calculate</button><br><br>
+  <h3>EMI ₹ : {{ emi }} / Month</h3>
+  </div>
