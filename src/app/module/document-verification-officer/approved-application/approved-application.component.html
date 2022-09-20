@@ -1,0 +1,42 @@
+
+<table class="table table-dark">
+    <thead>
+        
+        <th> Customerid </th>
+        <th> Customer_name </th>
+        <th> Customer_Email </th>
+        <th> Action</th>
+        <!-- <th> Customer_email</th>
+        <th> Customer-cibil </th>
+        <th>Cibil-Score</th>
+        <th>Cibil-Status</th>
+        <th>   Action </th>
+        <th>   Action </th> -->
+    </thead>
+  
+    <tbody>
+    <tr *ngFor="let c of Customer">
+       
+    <td>{{c.customerid}}</td>
+    <td>{{c.customername}}</td>
+    <td>{{c.customeremail}}</td>
+    <!-- <td>{{app.applicant_pancard}}</td>
+    <td>{{app.applicant_email}}</td>
+    <td>{{app.cibil.cibil_Score}}</td>
+    <td>{{app.cibil.cibil_Status}}</td> -->
+     <!-- <td ><button type="button"  (click)="checkcibil(a.applicantid)">checkcibil</button></td> -->
+     <!-- <td *ngIf="app  !=null">{{fc}}</td> -->
+        <td><button type="button" class="btn btn-success" (click)="ShowDocuments(c.customerid)">Check-Documents</button>
+        </td>
+        <!-- <td><button type="button" class="btn btn-danger">Rejected</button></td> -->
+        <!-- <td><button type="button" class="btn btn-success" (click)="savecustomer(app.applicantid)">Add_Customer</button></td> -->
+         <!-- <td>{{}}</td>  -->
+  
+   </tbody>
+  
+  </table>
+  
+  
+  
+  
+  

@@ -1,0 +1,201 @@
+<div  class="container"> 
+  <!-- <div class="row"> -->
+    <!-- <div *ngIf="[state]==">
+    <h2 align="center">Applicant Details</h2>
+    
+    <div  class="form-group col-md-6">
+      <input type="text" class="form-control"  placeholder="Enter name" [(ngModel)]="cs.app.applicant_name">
+  </div><br>
+  <div class="form-group col-md-6">
+      <input type="text" class="form-control"  placeholder="Enter Occupation" [(ngModel)]="cs.app.applicant_occupation">
+  </div><br>
+<div class="form-group col-md-6">
+    <input  type="text"  class="form-control"  placeholder="Enter pancard Number" [(ngModel)]="cs.app.applicant_pancard">
+</div><br>
+<div class="form-group col-md-6">
+    <input type="text" class="form-control"  placeholder="Enter Email " [(ngModel)]="cs.app.applicant_email">
+</div><br>
+<div class="form-group col-md-6">
+    <input type="text" class="form-control"  placeholder="Enter cibilScore" [(ngModel)]="cs.app.cibil.cibilScore">
+</div><br>
+<div class="form-group col-md-6">
+  <input type="text" class="form-control"  placeholder="Enter cibilScore" [(ngModel)]="cs.app.cibil.cibilScoreDateTime">
+</div><br>
+<div class="form-group col-md-6">
+  <input type="text" class="form-control"  placeholder="Enter cibilScore" [(ngModel)]="cs.app.cibil.cibilStatus">
+</div><br>
+<div class="form-group col-md-6">
+    <input type="text" class="form-control"  placeholder="Enter cibilScoreDateTime" [(ngModel)]="cs.app.cibil.cibilScoreDateTime">
+    <br><br> <button (click)="onnext()||saveApplicantAsCustomer()">next</button> &nbsp;
+      </div><br> -->
+</div>
+
+<div *ngIf="[state]==1">
+  <h2 align="center">Customer Details</h2>
+
+   <!-- <td>
+        <input type="text" class="form-control"  placeholder="Enter  customer_name" [(ngModel)]="app.applicant_name">
+   </td>
+
+   <td>
+    <input type="text" class="form-control"  placeholder="Enter  customer_email" [(ngModel)]="app.applicant_email">
+   </td>  -->
+
+    <div class="form-group col-md-6">
+        <input type="text" class="form-control"  placeholder="Enter  customer_address" [(ngModel)]="cs.c.customeraddress">
+    </div>
+  <br>
+  
+  <div class="form-group col-md-6">
+      <input type="text" class="form-control"  placeholder="Enter customer_age"[(ngModel)]="cs.c.customerage">
+  </div>
+  <br>
+  
+
+  <div class="form-group col-md-6">
+      <input type="text" class="form-control"  placeholder="Enter  customer_gender" [(ngModel)]="cs.c.customergender">
+  </div>
+<br>
+ 
+<div class="form-group col-md-6">
+    <input type="text" class="form-control"  placeholder="Enter customer_mobno"[(ngModel)]="cs.c.customermobno">
+     <!-- <br><br><button (click)="onnext()">next</button> &nbsp;  -->
+     <td><button type="button" class="btn btn-success" (click)="saveCustomer(cs.c)">save</button> 
+
+  </div>
+<br>
+
+</div>
+<div *ngIf="[state]==2">
+<h2 align="center">Profession Details</h2>
+
+<div  class="form-group col-md-6">
+  <input type="t<ext" class="form-control"  placeholder="Enter  proffession_name" [(ngModel)]="cs.prof.proffessionname">
+</div><br>
+<div class="form-group col-md-6">
+  <input type="text" class="form-control"  placeholder="Enter  proffession_type" [(ngModel)]="cs.prof.proffessiontype">
+</div>
+<br>
+<div class="form-group col-md-6">
+<input type="text" class="form-control"  placeholder="Enter designation"[(ngModel)]="cs.prof.designation">
+</div>
+<br>
+<div class="form-group col-md-6">
+  <input type="text" class="form-control"  placeholder="Enter  annual_salary" [(ngModel)]="cs.prof.annualsalary">
+  <!-- <br><br> <button (click)="onnext()">next</button> &nbsp; -->
+
+  <td><button type="button" class="btn btn-success" (click)="saveProfession(cs.prof)">save</button> -->
+</div><br>
+</div>
+<div *ngIf="[state]==3">
+<h2 align="center">Property Details</h2>
+
+<div  class="form-group col-md-6">
+  <input type="text" class="form-control"  placeholder="Enter  property_address" [(ngModel)]="cs.p.propertyaddress">
+</div>
+<br>
+<div class="form-group col-md-6">
+<input type="text" class="form-control"  placeholder="Enter property_area"[(ngModel)]="cs.p.propertyarea">
+</div>
+<br>
+<div class="form-group col-md-6">
+  <input type="text" class="form-control"  placeholder="Enter  property_price" [(ngModel)]="cs.p.propertyprice">
+</div><br>
+<div class="form-group col-md-6">
+  <input type="text" class="form-control"  placeholder="Enter  property_type" [(ngModel)]="cs.p.propertytype">
+   <!-- <br><br><button (click)="onnext()">next</button>&nbsp;  -->
+
+   <td><button type="button" class="btn btn-success" (click)="saveProperty(cs.p)">save</button> -->
+</div>
+<br>
+</div>
+<div *ngIf="[state]==4">
+<h2 align="center">Account Details</h2>
+
+<div class="form-group col-md-6">
+<input type="text" class="form-control"  placeholder="Enter account_holdername"[(ngModel)]="cs.ad.accountholdername">
+</div>
+<br>
+<div class="form-group col-md-6">
+  <input type="text" class="form-control"  placeholder="Enter  account_No" [(ngModel)]="cs.ad.accounntNo">
+</div><br>
+<div class="form-group col-md-6">
+  <input type="text" class="form-control"  placeholder="Enter  account_type" [(ngModel)]="cs.ad.accounttype">
+</div><br>
+<div class="form-group col-md-6">
+  <input type="text" class="form-control"  placeholder="Enter  ifsc_code " [(ngModel)]="cs.ad.ifsccode">
+  <!-- <br><br><button (click)="onnext()">next</button> &nbsp; -->
+  <td><button type="button" class="btn btn-success" (click)="saveAccount(cs.ad)">save</button>
+</div>
+<br>
+</div>
+<!-- <div *ngIf="[state]==6">
+<h2 align="center">Loan Details</h2>
+
+<div class="form-group col-md-6">
+<input type="text" class="form-control"  placeholder="Enter Address"[(ngModel)]="cs.c.loanDetails.loanPrincipalAmt">
+</div>
+<br>
+<div class="form-group col-md-6">
+  <input type="text" class="form-control"  placeholder="Enter  rollno" [(ngModel)]="cs.c.loanDetails.loanTenure">
+</div><br>
+<div class="form-group col-md-6">
+  <input type="text" class="form-control"  placeholder="Enter  name" [(ngModel)]="cs.c.loanDetails.rateOfInterest">
+</div>
+<br>
+<div class="form-group col-md-6">
+<input type="text" class="form-control"  placeholder="Enter Loan status"[(ngModel)]="cs.c.loanDetails.status">
+</div>
+<br>
+<div class="form-group col-md-6">
+  <input type="text" class="form-control"  placeholder="Enter  emiAmtMonnthly" [(ngModel)]="cs.c.loanDetails.emiDetails.emiAmtMonnthly">
+</div><br>
+ <div class="form-group col-md-6">
+  <input type="text" class="form-control"  placeholder="Enter  emiDueDate" [(ngModel)]="cs.c.loanDetails.emiDetails.emiDueDate">
+</div>
+<br>
+<div class="form-group col-md-6">
+<input type="text" class="form-control"  placeholder="Enter previousEmiStatus"[(ngModel)]="cs.c.loanDetails.emiDetails.previousEmiStatus">
+<br><br><button (click)="onnext()">next</button> &nbsp;
+<td><button type="button" class="btn btn-success" (click)="saveLoanDetails(cs.ld)">save</button>
+</div>
+<br>
+</div>
+<div> -->
+  <div *ngIf="[state]==5">
+  <h2 align="center">Upload Documents</h2>
+  <!-- <form  [formGroup]="formDoc"  (ngSubmit)="saveDoc()"> -->
+ 
+ ADDRESS-PROOF   &nbsp;&nbsp;<input type="file" (change)="onselectaddressProof($event)"><br><br>
+ <img [src]="imageSrc1" height="50">
+    
+ PANCARD   &nbsp;&nbsp;<input type="file" (change)="onselectpancard($event)"><br><br>
+ <img [src]="imageSrc2" height="50">
+
+  AADHARCARD   &nbsp;&nbsp;<input type="file" (change)="onselectaadharcard($event)"><br><br>
+    <img [src]="imageSrc3" height="50">
+  
+    SIGNATURE &nbsp;&nbsp;<input type="file" (change)="onselectsignature($event)"><br><br>
+    <img [src]="imageSrc4" height="50">
+
+    PHOTO   &nbsp;&nbsp;<input type="file" (change)="onselectphoto($event)"><br><br>
+    <img [src]="imageSrc5" height="50">
+
+    INCOMETAX &nbsp;&nbsp;<input type="file" (change)="onselectincometax($event)"><br><br>
+    <img [src]="imageSrc6" height="50">
+     
+    SALARY-SLIP &nbsp;&nbsp;<input type="file" (change)="onselectsalaryslip($event)"><br><br>
+    <img [src]="imageSrc7" height="50">
+    
+    BANKCHECK &nbsp;&nbsp;<input type="file" (change)="onselectbankcheck($event)"><br><br>
+    <img [src]="imageSrc8" height="50">
+
+    <div class="form-group col-md-6"> 
+      <button class="btn btn-success btn-lg btn-block" (click)="saveDocuments(cs.doc)">Submit</button>
+  </div>
+
+ <!-- <button type="submit">AddDocument</button><br><br> -->
+</div>
+
+    
+    
